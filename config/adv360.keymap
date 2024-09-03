@@ -37,8 +37,13 @@
         compatible = "zmk,combos";
 
         Left_paren {
-            bindings = <&kp NUMBER_9>;
+            bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <30 31>;
+        };
+
+        right_paren {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <31 32>;
         };
     };
 
@@ -47,11 +52,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                                 &mo 3       &kp N6     &kp N7      &kp N8     &kp N9         &kp N0    &kp MINUS
-&kp LS(TAB)  &kp J      &kp H     &kp M     &kp G      &kp Q   &none                                                                  &none       &kp V      &kp C       &kp U      &kp O          &kp X     &kp BSLH
-&kp TAB      &kp S      &kp N     &kp T     &kp Y      &kp K   &none           &kp LCTRL  &kp LALT          &kp LGUI       &kp RCTRL  &none       &kp B      &kp W       &kp I      &kp A          &kp R     &kp MINUS
-&kp LSHFT    &kp F      &kp L     &kp D     &kp P      &kp Z                              &kp C_REPEAT      &kp PG_UP                             &kp SLASH  &kp PERIOD  &kp COMMA  &kp SEMICOLON  &kp SQT   &kp RSHFT
-&mo 2        &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp LEFT_SHIFT  &kp SPACE  &kp ENTER         &kp BACKSPACE  &kp E      &kp ESCAPE             &kp UP      &kp DOWN   &kp LBKT       &kp RBKT  &mo 2
+&kp GRAVE    &kp N1     &kp N2        &kp N3    &kp N4        &kp N5  &tog 1                                                                 &mo 3       &kp N6     &kp N7          &kp N8           &kp N9         &kp N0     &kp MINUS
+&kp LS(TAB)  &kp J      &kp H         &kp M     &kp G         &kp Q   &none                                                                  &none       &kp V      &kp C           &kp U            &kp O          &kp X      &kp BSLH
+&kp TAB      &kp S      &kp N         &kp T     &kp Y         &kp K   &none           &kp LCTRL  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RCTRL  &none       &kp B      &kp W           &kp I            &kp A          &kp R      &kp MINUS
+&key_repeat  &kp F      &kp L         &kp D     &kp P         &kp Z                              &kp HOME          &kp END                               &kp SLASH  &kp PERIOD      &kp COMMA        &kp SEMICOLON  &kp SQT    &key_repeat
+&mo 2        &kp LCTRL  &kp LEFT_ALT  &kp LEFT  &kp UP_ARROW          &kp LEFT_SHIFT  &kp SPACE  &kp ENTER         &kp BACKSPACE  &kp E      &kp ESCAPE             &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_ALT  &kp RCTRL  &mo 2
             >;
         };
 
