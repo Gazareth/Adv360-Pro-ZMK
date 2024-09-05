@@ -17,6 +17,13 @@
             bindings = <&kp RET>;
         };
 
+        macro_dbl_eq: macro_dbl_eq {
+            compatible = "zmk,behavior-macro";
+            label = "MACRO_DBL_EQ";
+            #binding-cells = <0>;
+            bindings = <&kp RET>;
+        };
+
         #endif
 
         hm: homerow_mods {
