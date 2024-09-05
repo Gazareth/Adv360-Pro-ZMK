@@ -17,13 +17,6 @@
             bindings = <&kp RET>;
         };
 
-        macro_double_equals: macro_double_equals {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>;
-            label = "macro_double_equals_symbol";
-        };
-
         #endif
 
         hm: homerow_mods {
@@ -154,7 +147,7 @@
         };
 
         open_close_curly_paren {
-            bindings = <&macro_double_equals>;
+            bindings = <&macro_ver>;
             key-positions = <23 26>;
         };
 
