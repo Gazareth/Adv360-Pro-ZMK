@@ -197,7 +197,7 @@
         };
 
         open_close_curly_paren {
-            bindings = <&key_repeat>;
+            bindings = <&openCloseCurlyParen>;
             key-positions = <23 26>;
         };
 
