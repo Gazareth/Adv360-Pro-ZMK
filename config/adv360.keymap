@@ -17,6 +17,20 @@
             bindings = <&kp RET>;
         };
 
+        doubleEqualsSymbol: doubleEqualsSymbol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp EQUAL>;
+            label = "DOUBLEEQUALSSYMBOL";
+        };
+
+        tripleEqualsSymbol: tripleEqualsSymbol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp EQUAL &kp EQUAL>;
+            label = "TRIPLEEQUALSSYMBOL";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -94,6 +108,41 @@
         caret {
             bindings = <&kp CARET>;
             key-positions = <31 30>;
+        };
+
+        equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <41 42 43>;
+        };
+
+        double_equals {
+            bindings = <&doubleEqualsSymbol>;
+            key-positions = <41 43>;
+        };
+
+        triple_equals {
+            bindings = <&tripleEqualsSymbol>;
+            key-positions = <41 42 43 44>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <42 43>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <42 41>;
+        };
+
+        multiply {
+            bindings = <&kp KP_MULTIPLY>;
+            key-positions = <42 25>;
+        };
+
+        divid {
+            bindings = <&kp KP_DIVIDE>;
+            key-positions = <42 23>;
         };
     };
 
