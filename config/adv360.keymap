@@ -19,7 +19,7 @@
 
         macro_dbl_eq: macro_dbl_eq {
             compatible = "zmk,behavior-macro";
-            label = "MACRO_DBL_EQ";
+            label = "macro_dbl_eq";
             #binding-cells = <0>;
             bindings = <&kp RET>;
         };
