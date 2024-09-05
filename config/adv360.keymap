@@ -36,7 +36,7 @@
     combos {
         compatible = "zmk,combos";
 
-        Left_paren {
+        left_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <30 31>;
         };
@@ -44,6 +44,36 @@
         right_paren {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <31 32>;
+        };
+
+        less_than {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <29 31>;
+        };
+
+        greater_than {
+            bindings = <&kp GT>;
+            key-positions = <31 33>;
+        };
+
+        left_square_paren {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <41 42>;
+        };
+
+        right_square_paren {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <42 43>;
+        };
+
+        left_curly_paren {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <40 42>;
+        };
+
+        right_curly_paren {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <42 44>;
         };
     };
 
