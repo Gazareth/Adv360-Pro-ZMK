@@ -38,42 +38,42 @@
 
         left_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <30 31>;
+            key-positions = <16 17>;
         };
 
         right_paren {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <31 32>;
+            key-positions = <18 17>;
         };
 
         less_than {
             bindings = <&kp LESS_THAN>;
-            key-positions = <29 31>;
+            key-positions = <17 15>;
         };
 
         greater_than {
             bindings = <&kp GT>;
-            key-positions = <31 33>;
+            key-positions = <17 19>;
         };
 
         left_square_paren {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <41 42>;
+            key-positions = <23 24>;
         };
 
         right_square_paren {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <42 43>;
+            key-positions = <24 25>;
         };
 
         left_curly_paren {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <40 42>;
+            key-positions = <22 24>;
         };
 
         right_curly_paren {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <42 44>;
+            key-positions = <24 26>;
         };
     };
 
