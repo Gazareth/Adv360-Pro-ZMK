@@ -20,50 +20,8 @@
         macro_double_equals: macro_double_equals {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp EQUAL>;
+            bindings = <&kp EQUAL>;
             label = "macro_double_equals_symbol";
-        };
-
-        tripleEqualsSymbol: tripleEqualsSymbol {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp EQUAL &kp EQUAL &kp EQUAL>;
-
-            label = "TRIPLEEQUALSSYMBOL";
-        };
-
-        openCloseParen: openCloseParen {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS>;
-
-            label = "OPENCLOSEPAREN";
-        };
-
-        openCloseChevronParen: openCloseChevronParen {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LESS_THAN &kp GREATER_THAN>;
-
-            label = "OPENCLOSECHEVRONPAREN";
-        };
-
-        openCloseSquareParen: openCloseSquareParen {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_BRACKET &kp RIGHT_BRACKET>;
-
-            label = "OPENCLOSESQUAREPAREN";
-        };
-
-        openCloseCurlyParen: openCloseCurlyParen {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_BRACE &kp RIGHT_BRACE>;
-
-            label = "OPENCLOSECURLYPAREN";
         };
 
         #endif
