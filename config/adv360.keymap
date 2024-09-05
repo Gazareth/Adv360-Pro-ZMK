@@ -17,12 +17,11 @@
             bindings = <&kp RET>;
         };
 
-        doubleEqualsSymbol: doubleEqualsSymbol {
+        macro_double_equals: macro_double_equals {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp EQUAL &kp EQUAL>;
-
-            label = "DOUBLEEQUALSSYMBOL";
+            bindings = <&kp EQUAL &kp EQUAL>;
+            label = "macro_double_equals_symbol";
         };
 
         tripleEqualsSymbol: tripleEqualsSymbol {
@@ -197,7 +196,7 @@
         };
 
         open_close_curly_paren {
-            bindings = <&macro_ver>;
+            bindings = <&macro_double_equals>;
             key-positions = <23 26>;
         };
 
