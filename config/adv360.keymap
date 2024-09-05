@@ -144,12 +144,12 @@
         };
 
         double_equals {
-            bindings = <&doubleEqualsSymbol>;
+            bindings = <&kp EQUAL>;
             key-positions = <41 43>;
         };
 
         triple_equals {
-            bindings = <&tripleEqualsSymbol>;
+            bindings = <&kp EQUAL>;
             key-positions = <41 42 43 44>;
         };
 
