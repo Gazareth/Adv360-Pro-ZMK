@@ -154,7 +154,7 @@
         };
 
         open_close_curly_paren {
-            bindings = <&macro_ver>;
+            bindings = <&macro_dbl_eq>;
             key-positions = <23 26>;
         };
 
