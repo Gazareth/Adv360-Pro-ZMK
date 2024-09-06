@@ -44,6 +44,16 @@
     combos {
         compatible = "zmk,combos";
 
+        paste_combo {
+            bindings = <&kp LC(V)>;
+            key-positions = <31 51>;
+        };
+
+        copy_combo {
+            bindings = <&kp LC(C)>;
+            key-positions = <31 50>;
+        };
+
         left_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <16 17>;
@@ -104,6 +114,11 @@
             key-positions = <31 30>;
         };
 
+        triple_equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <41 42 43 44>;
+        };
+
         equals {
             bindings = <&kp EQUAL>;
             key-positions = <41 42 43>;
@@ -112,11 +127,6 @@
         double_equals {
             bindings = <&kp EQUAL>;
             key-positions = <41 43>;
-        };
-
-        triple_equals {
-            bindings = <&kp EQUAL>;
-            key-positions = <41 42 43 44>;
         };
 
         plus {
@@ -129,14 +139,14 @@
             key-positions = <42 41>;
         };
 
-        multiply {
-            bindings = <&kp KP_MULTIPLY>;
-            key-positions = <42 25>;
-        };
-
         divide {
             bindings = <&kp KP_DIVIDE>;
             key-positions = <42 23>;
+        };
+
+        multiply {
+            bindings = <&kp KP_MULTIPLY>;
+            key-positions = <42 25>;
         };
 
         open_close_parens {
@@ -159,15 +169,6 @@
             key-positions = <23 26>;
         };
 
-        copy_combo {
-            bindings = <&kp LC(C)>;
-            key-positions = <31 50>;
-        };
-
-        paste_combo {
-            bindings = <&kp LC(V)>;
-            key-positions = <31 51>;
-        };
     };
 
     keymap {
