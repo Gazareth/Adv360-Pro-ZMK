@@ -46,5 +46,5 @@
       bindings = <BINDINGS>; \
   };
 
-# Your macros
+// Your macros
 MACRO(macro_dbl_eq, &kp EQUAL &kp GT)
