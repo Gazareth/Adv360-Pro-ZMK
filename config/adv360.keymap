@@ -48,6 +48,16 @@
             key-positions = <41 42 43 44>;
         };
 
+        equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <41 42 43>;
+        };
+
+        pct {
+            bindings = <&kp PRCNT>;
+            key-positions = <31 32 30>;
+        };
+
         paste_combo {
             bindings = <&kp LC(V)>;
             key-positions = <31 51>;
@@ -61,16 +71,6 @@
         cut_combo {
             bindings = <&kp LC(X)>;
             key-positions = <31 48>;
-        };
-
-        equals {
-            bindings = <&kp EQUAL>;
-            key-positions = <41 42 43>;
-        };
-
-        pct {
-            bindings = <&kp PRCNT>;
-            key-positions = <31 32 30>;
         };
 
         left_paren {
