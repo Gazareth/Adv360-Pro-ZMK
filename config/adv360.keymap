@@ -44,7 +44,7 @@
         compatible = "zmk,combos";
 
         triple_equals {
-            bindings = <&kp EQUAL>;
+            bindings = <&kp D>;
             key-positions = <41 42 43 44>;
             layers = <0>;
         };
