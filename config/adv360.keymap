@@ -46,131 +46,157 @@
         triple_equals {
             bindings = <&kp EQUAL>;
             key-positions = <41 42 43 44>;
+            layers = <0>;
         };
 
         equals {
             bindings = <&kp EQUAL>;
             key-positions = <41 42 43>;
+            layers = <0>;
         };
 
         pct {
             bindings = <&kp PRCNT>;
             key-positions = <31 32 30>;
+            layers = <0>;
         };
 
         paste_combo {
             bindings = <&kp LC(V)>;
             key-positions = <31 51>;
+            layers = <0>;
         };
 
         copy_combo {
             bindings = <&kp LC(C)>;
             key-positions = <31 50>;
+            layers = <0>;
         };
 
         cut_combo {
             bindings = <&kp LC(X)>;
             key-positions = <31 48>;
+            layers = <0>;
         };
 
         left_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <16 17>;
+            layers = <0>;
         };
 
         right_paren {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <18 17>;
+            layers = <0>;
         };
 
         less_than {
             bindings = <&kp LESS_THAN>;
             key-positions = <17 15>;
+            layers = <0>;
         };
 
         greater_than {
             bindings = <&kp GT>;
             key-positions = <17 19>;
+            layers = <0>;
         };
 
         left_square_paren {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <23 24>;
+            layers = <0>;
         };
 
         right_square_paren {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <24 25>;
+            layers = <0>;
         };
 
         left_curly_paren {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <22 24>;
+            layers = <0>;
         };
 
         right_curly_paren {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <24 26>;
+            layers = <0>;
         };
 
         dollar {
             bindings = <&kp DOLLAR>;
             key-positions = <31 33>;
+            layers = <0>;
         };
 
         zero {
             bindings = <&kp N0>;
             key-positions = <29 31>;
+            layers = <0>;
         };
 
         caret {
             bindings = <&kp CARET>;
             key-positions = <31 30>;
+            layers = <0>;
         };
 
         double_equals {
             bindings = <&kp EQUAL>;
             key-positions = <41 43>;
+            layers = <0>;
         };
 
         plus {
             bindings = <&kp PLUS>;
             key-positions = <42 43>;
+            layers = <0>;
         };
 
         minus {
             bindings = <&kp MINUS>;
             key-positions = <42 41>;
+            layers = <0>;
         };
 
         divide {
             bindings = <&kp KP_DIVIDE>;
             key-positions = <42 23>;
+            layers = <0>;
         };
 
         multiply {
             bindings = <&kp KP_MULTIPLY>;
             key-positions = <42 25>;
+            layers = <0>;
         };
 
         open_close_parens {
             bindings = <&key_repeat>;
             key-positions = <16 18>;
+            layers = <0>;
         };
 
         open_close_chevron_paren {
             bindings = <&key_repeat>;
             key-positions = <15 18>;
+            layers = <0>;
         };
 
         open_close_square_paren {
             bindings = <&key_repeat>;
             key-positions = <23 25>;
+            layers = <0>;
         };
 
         open_close_curly_paren {
             bindings = <&macro_dbl_eq>;
             key-positions = <23 26>;
+            layers = <0>;
         };
     };
 
