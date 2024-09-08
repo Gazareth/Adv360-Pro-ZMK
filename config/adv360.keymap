@@ -104,12 +104,14 @@
             bindings = <&kp LC(V)>;
             key-positions = <31 51>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         copy_combo {
             bindings = <&kp LC(C)>;
             key-positions = <31 50>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         cut_combo {
@@ -122,6 +124,7 @@
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <16 17>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         right_paren {
@@ -146,18 +149,21 @@
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <23 24>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         right_square_paren {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <24 25>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         left_curly_paren {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <22 24>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         right_curly_paren {
@@ -176,18 +182,21 @@
             bindings = <&kp N0>;
             key-positions = <29 31>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         caret {
             bindings = <&kp CARET>;
             key-positions = <31 30>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         double_equals {
             bindings = <&macro_dbl_eq>;
             key-positions = <41 43>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         plus {
@@ -200,33 +209,51 @@
             bindings = <&kp MINUS>;
             key-positions = <42 41>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         divide {
             bindings = <&kp KP_DIVIDE>;
             key-positions = <42 23>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         multiply {
             bindings = <&kp KP_MULTIPLY>;
             key-positions = <42 25>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         undo_combo {
             bindings = <&kp LC(Z)>;
             key-positions = <30 49>;
+            layers = <0>;
         };
 
         redo_combo {
             bindings = <&kp LC(LS(Z))>;
             key-positions = <30 50>;
+            layers = <0>;
         };
 
         underscore_combo {
             bindings = <&kp UNDERSCORE>;
             key-positions = <41 56>;
+            layers = <0>;
+        };
+
+        double_quotes_combo {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <58 57>;
+            layers = <0>;
+        };
+
+        grave_combo {
+            bindings = <&kp GRAVE>;
+            key-positions = <58 57 56>;
+            layers = <0>;
         };
     };
 
