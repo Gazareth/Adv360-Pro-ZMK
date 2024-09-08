@@ -29,6 +29,24 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        double_tap_e_delete: double_tap_e_delete {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLE_TAP_E_DELETE";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp DELETE>;
+        };
+
+        hold_tap_keypad_e_delete: hold_tap_keypad_e_delete {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_KEYPAD_E_DELETE";
+            bindings = <&mo>, <&double_tap_e_delete>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            hold-while-undecided;
+        };
     };
 
     macros {
@@ -219,11 +237,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE    &kp N1     &kp N2        &kp N3    &kp N4        &kp N5  &tog 1                                                                        &mo 3         &kp N6     &kp N7          &kp N8           &kp N9         &kp N0     &kp POUND
-&kp LS(TAB)  &kp J      &kp H         &kp M     &kp G         &kp Q   &none                                                                         &none         &kp V      &kp C           &kp U            &kp O          &kp X      &kp BSLH
-&kp TAB      &kp S      &kp N         &kp T     &kp Y         &kp K   &none           &kp LCTRL  &kp LEFT_GUI      &kp RIGHT_GUI         &kp RCTRL  &none         &kp B      &kp W           &kp I            &kp A          &kp R      &kp MINUS
-&key_repeat  &kp F      &kp L         &kp D     &kp P         &kp Z                              &kp HOME          &kp END                                        &kp SLASH  &kp PERIOD      &kp COMMA        &kp SEMICOLON  &kp SQT    &key_repeat
-&kp K_BACK   &kp LCTRL  &kp LEFT_ALT  &kp LEFT  &kp UP_ARROW          &kp LEFT_SHIFT  &kp SPACE  &kp ENTER         &mt DELETE BACKSPACE  &kp E      &lt 2 ESCAPE             &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_ALT  &kp RCTRL  &kp K_FORWARD
+&kp GRAVE      &kp N1     &kp N2        &kp N3    &kp N4        &kp N5  &tog 1                                                                                     &mo 3         &kp N6     &kp N7          &kp N8           &kp N9         &kp N0     &kp POUND
+&kp LS(TAB)    &kp J      &kp H         &kp M     &kp G         &kp Q   &none                                                                                      &none         &kp V      &kp C           &kp U            &kp O          &kp X      &kp BSLH
+&kp TAB        &kp S      &kp N         &kp T     &kp Y         &kp K   &none           &kp LCTRL  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RCTRL                      &none         &kp B      &kp W           &kp I            &kp A          &kp R      &kp MINUS
+&key_repeat    &kp F      &kp L         &kp D     &kp P         &kp Z                              &kp HOME          &kp END                                                     &kp SLASH  &kp PERIOD      &kp COMMA        &kp SEMICOLON  &kp SQT    &key_repeat
+&kp C_AC_BACK  &kp LCTRL  &kp LEFT_ALT  &kp LEFT  &kp UP_ARROW          &kp LEFT_SHIFT  &kp SPACE  &kp ENTER         &kp BACKSPACE  &hold_tap_keypad_e_delete 1 0  &lt 2 ESCAPE             &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_ALT  &kp RCTRL  &kp C_AC_FORWARD
             >;
         };
 
