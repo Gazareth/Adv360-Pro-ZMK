@@ -38,6 +38,19 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp EQUAL>;
         };
+
+        macro_caps_and: macro_caps_and {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp CAPS &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp CAPS>;
+
+            label = "MACRO_CAPS_AND";
+        };
     };
 
     combos {
