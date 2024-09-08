@@ -69,13 +69,20 @@
 
             label = "MACRO_CAPS_AND";
         };
+
+        macro_triple_eq: macro_triple_equals {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_dbl_eq &kp EQUAL>;
+            label = "MACRO_TRIPLE_EQUALS";
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
         triple_equals {
-            bindings = <&kp D>;
+            bindings = <&macro_triple_eq>;
             key-positions = <41 42 43 44>;
             layers = <0>;
             timeout-ms = <200>;
@@ -178,7 +185,7 @@
         };
 
         double_equals {
-            bindings = <&kp EQUAL>;
+            bindings = <&macro_dbl_eq>;
             key-positions = <41 43>;
             layers = <0>;
         };
@@ -257,11 +264,11 @@
 
         mouse {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7    &kp F8                  &kp F9                  &kp F10                 &kp F11   &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans    &kp LS(LA(LC(LG(F5))))  &kp LS(LA(LC(LG(F1))))  &kp LS(LA(LC(LG(F6))))  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans    &kp LS(LC(LA(LG(F2))))  &kp LS(LA(LC(LG(F3))))  &kp LS(LA(LC(LG(F4))))  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &mkp MB4  &mkp MB1                &mkp MB3                &mkp MB2                &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans            &trans                  &trans                  &trans                  &trans    &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7    &kp F8              &kp F9              &kp F10             &kp F11   &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans    &macro_caps_and F5  &macro_caps_and F1  &macro_caps_and F6  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans    &macro_caps_and F2  &macro_caps_and F3  &macro_caps_and F4  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &mkp MB4  &mkp MB1            &mkp MB3            &mkp MB2            &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans            &trans              &trans              &trans              &trans    &trans
             >;
         };
 
