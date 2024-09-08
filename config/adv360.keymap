@@ -214,28 +214,19 @@
             layers = <0>;
         };
 
-        open_close_parens {
-            bindings = <&key_repeat>;
-            key-positions = <16 18>;
-            layers = <0>;
+        undo_combo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <30 49>;
         };
 
-        open_close_chevron_paren {
-            bindings = <&key_repeat>;
-            key-positions = <15 18>;
-            layers = <0>;
+        redo_combo {
+            bindings = <&kp LC(LS(Z))>;
+            key-positions = <30 50>;
         };
 
-        open_close_square_paren {
-            bindings = <&key_repeat>;
-            key-positions = <23 25>;
-            layers = <0>;
-        };
-
-        open_close_curly_paren {
-            bindings = <&macro_dbl_eq>;
-            key-positions = <23 26>;
-            layers = <0>;
+        underscore_combo {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <41 56>;
         };
     };
 
