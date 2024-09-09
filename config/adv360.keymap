@@ -43,7 +43,7 @@
             bindings = <&mo>, <&double_tap_e_delete>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <350>;
             flavor = "balanced";
             hold-while-undecided;
         };
@@ -243,6 +243,7 @@
             bindings = <&kp UNDERSCORE>;
             key-positions = <41 56>;
             layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         double_quotes_combo {
