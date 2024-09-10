@@ -263,6 +263,74 @@
             key-positions = <30 50>;
             layers = <1>;
         };
+
+        alt_tab_combo {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <29 50>;
+            layers = <0>;
+        };
+
+        shift_alt_tab {
+            bindings = <&kp LA(LS(TAB))>;
+            key-positions = <29 48>;
+            layers = <0>;
+        };
+
+        DESKTOP_1 {
+            bindings = <&macro_caps_and Q>;
+            key-positions = <29 16>;
+            layers = <0>;
+            require-prior-idle-ms = <200>;
+        };
+
+        DESKTOP_2 {
+            bindings = <&macro_caps_and W>;
+            key-positions = <29 17>;
+            layers = <0>;
+            require-prior-idle-ms = <200>;
+        };
+
+        DESKTOP_3 {
+            bindings = <&macro_caps_and E>;
+            key-positions = <29 18>;
+            layers = <0>;
+            require-prior-idle-ms = <200>;
+        };
+
+        DESKTOP_4 {
+            bindings = <&macro_caps_and R>;
+            key-positions = <29 19>;
+            layers = <0>;
+            require-prior-idle-ms = <200>;
+        };
+
+        DESKTOP_5 {
+            bindings = <&macro_caps_and A>;
+            key-positions = <29 30>;
+            layers = <0>;
+            require-prior-idle-ms = <200>;
+        };
+
+        DESKTOP_6 {
+            bindings = <&macro_caps_and S>;
+            key-positions = <29 31>;
+            layers = <0>;
+            require-prior-idle-ms = <200>;
+        };
+
+        DESKTOP_7 {
+            bindings = <&macro_caps_and D>;
+            key-positions = <29 31>;
+            layers = <0>;
+            require-prior-idle-ms = <200>;
+        };
+
+        DESKTOP_8 {
+            bindings = <&macro_caps_and F>;
+            key-positions = <29 32>;
+            layers = <0>;
+            require-prior-idle-ms = <200>;
+        };
     };
 
     keymap {
@@ -280,11 +348,11 @@
 
         keypad {
             bindings = <
-&trans            &trans           &kp F10  &kp F11  &kp F12  &trans  &trans                                      &trans  &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &trans
-&kp C_NEXT        &kp C_VOLUME_UP  &kp F7   &kp F8   &kp F9   &trans  &none                                       &none   &trans  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &trans
-&kp C_PLAY_PAUSE  &kp K_MUTE       &kp F4   &kp F5   &kp F6   &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
-&kp C_PREVIOUS    &kp C_VOL_DN     &kp F1   &kp F2   &kp F3   &trans                  &trans      &trans                  &trans  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-&trans            &trans           &trans   &trans   &trans           &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans        &kp KP_DOT     &trans           &trans
+&trans            &trans           &kp F10  &kp F11  &kp F12  &trans  &kp KP_NUMLOCK                                      &trans  &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &trans
+&kp C_NEXT        &kp C_VOLUME_UP  &kp F7   &kp F8   &kp F9   &trans  &none                                               &none   &trans  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &trans
+&kp C_PLAY_PAUSE  &kp K_MUTE       &kp F4   &kp F5   &kp F6   &trans  &none           &trans  &trans      &trans  &trans  &none   &trans  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
+&kp C_PREVIOUS    &kp C_VOL_DN     &kp F1   &kp F2   &kp F3   &trans                          &trans      &trans                  &trans  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
+&trans            &trans           &trans   &trans   &trans           &trans          &trans  &trans      &trans  &trans  &trans          &trans      &trans        &kp KP_DOT     &trans           &trans
             >;
         };
 
