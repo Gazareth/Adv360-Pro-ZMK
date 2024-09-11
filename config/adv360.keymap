@@ -35,6 +35,8 @@
             label = "DOUBLE_TAP_E_DELETE";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp DELETE>;
+
+            tapping-term-ms = <350>;
         };
 
         hold_tap_keypad_e_delete: hold_tap_keypad_e_delete {
