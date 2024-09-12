@@ -99,6 +99,34 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp GT>;
         };
+
+        write_number_2: write_number_2 {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+            label = "WRITE_NUMBER_2";
+        };
+
+        write_number: write_number {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "WRITE_NUMBER";
+        };
+
+        write_number_3_1: write_number_3_1 {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&kp NUMBER_1 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+            label = "WRITE_NUMBER_3_1";
+        };
+
+        write_number_3_2: write_number_3_2 {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&kp NUMBER_2 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+            label = "WRITE_NUMBER_3_2";
+        };
     };
 
     combos {
