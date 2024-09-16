@@ -448,7 +448,7 @@
 &kp LS(TAB)  &kp J      &kp H         &kp M     &kp G         &kp Q   &none                                                                                      &none         &kp V      &kp C           &kp U            &kp O          &kp X      &kp NON_US_BSLH
 &kp TAB      &kp S      &kp N         &kp T     &kp Y         &kp K   &kp END         &kp LCTRL  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RCTRL                      &kp HOME      &kp B      &kp W           &kp I            &kp A          &kp R      &kp MINUS
 &key_repeat  &kp F      &kp L         &kp D     &kp P         &kp Z                              &kp HOME          &kp END                                                     &kp SLASH  &kp PERIOD      &kp COMMA        &kp SEMICOLON  &kp SQT    &key_repeat
-&mkp MB4     &kp LCTRL  &kp LEFT_ALT  &kp LEFT  &kp UP_ARROW          &kp LEFT_SHIFT  &kp SPACE  &kp ENTER         &kp BACKSPACE  &hold_tap_keypad_e_delete 1 0  &lt 2 ESCAPE             &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_ALT  &kp RCTRL  &mkp MB5
+&mkp MB4     &kp LCTRL  &kp LEFT_ALT  &kp LEFT  &kp UP_ARROW          &kp LEFT_SHIFT  &kp SPACE  &lt 4 ENTER       &kp BACKSPACE  &hold_tap_keypad_e_delete 1 0  &lt 2 ESCAPE             &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_ALT  &kp RCTRL  &mkp MB5
             >;
         };
 
