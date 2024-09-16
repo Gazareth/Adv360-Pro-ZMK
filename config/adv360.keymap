@@ -86,10 +86,10 @@
             label = "MACRO_CAPS_AND";
         };
 
-        macro_triple_eq: macro_triple_equals {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_dbl_tap EQUAL &kp EQUAL>;
+        macro_triple_tap: macro_triple_equals {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &macro_dbl_tap MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MACRO_TRIPLE_EQUALS";
         };
 
@@ -142,7 +142,7 @@
         #include "binary_combos.dtsi"
 
         triple_equals {
-            bindings = <&macro_triple_eq>;
+            bindings = <&macro_triple_tap EQUAL>;
             key-positions = <41 42 43 44>;
             layers = <0>;
             timeout-ms = <200>;
@@ -228,7 +228,7 @@
 
         right_curly_paren {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <24 26>;
+            key-positions = <26 42>;
             layers = <0>;
         };
 
@@ -415,7 +415,7 @@
 
         exclamation {
             bindings = <&kp EXCL>;
-            key-positions = <31 16>;
+            key-positions = <31 15>;
             require-prior-idle-ms = <200>;
             layers = <0>;
         };
@@ -438,6 +438,12 @@
             bindings = <&macro_dbl_mouse MB1 MB1>;
             key-positions = <55 56>;
             layers = <2>;
+        };
+
+        triple_grave_combo {
+            bindings = <&macro_triple_tap GRAVE>;
+            key-positions = <58 43 42>;
+            layers = <4>;
         };
     };
 
