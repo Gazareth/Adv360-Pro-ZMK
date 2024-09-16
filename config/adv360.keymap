@@ -75,7 +75,7 @@
         macro_triple_eq: macro_triple_equals {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_dbl_tap EQUAL EQUAL &kp EQUAL>;
+            bindings = <&macro_dbl_tap EQUAL &kp EQUAL>;
             label = "MACRO_TRIPLE_EQUALS";
         };
 
