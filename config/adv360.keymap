@@ -53,10 +53,10 @@
 
     macros {
         macro_dbl_tap: macro_dbl_tap {
-            compatible = "zmk,behavior-macro-two-param";
+            compatible = "zmk,behavior-macro-one-param";
             label = "MACRO_DBL_TAP";
-            #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
         };
 
         macro_caps_and: macro_caps_and {
@@ -499,6 +499,16 @@
 &none  &none         &none         &none           &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &macro_dbl_tap  &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none           &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        dbl_tap {
+            bindings = <
+&trans  &trans            &trans            &trans            &trans            &trans            &trans                                                &trans  &trans                &trans                 &trans                &trans                    &trans              &trans
+&trans  &macro_dbl_tap J  &macro_dbl_tap H  &macro_dbl_tap M  &macro_dbl_tap G  &macro_dbl_tap Q  &trans                                                &trans  &macro_dbl_tap V      &macro_dbl_tap C       &macro_dbl_tap U      &macro_dbl_tap O          &macro_dbl_tap X    &trans
+&trans  &macro_dbl_tap S  &macro_dbl_tap N  &macro_dbl_tap T  &macro_dbl_tap Y  &macro_dbl_tap K  &trans  &trans  &trans      &trans  &trans            &trans  &macro_dbl_tap B      &macro_dbl_tap W       &macro_dbl_tap I      &macro_dbl_tap A          &macro_dbl_tap R    &trans
+&trans  &macro_dbl_tap F  &macro_dbl_tap L  &macro_dbl_tap D  &macro_dbl_tap P  &macro_dbl_tap Z                  &trans      &trans                            &macro_dbl_tap SLASH  &macro_dbl_tap PERIOD  &macro_dbl_tap COMMA  &macro_dbl_tap SEMICOLON  &macro_dbl_tap SQT  &trans
+&trans  &trans            &trans            &trans            &trans                              &trans  &trans  &trans      &trans  &macro_dbl_tap E  &trans                        &trans                 &trans                &trans                    &trans              &trans
             >;
         };
     };
