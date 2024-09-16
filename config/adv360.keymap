@@ -127,6 +127,13 @@
             bindings = <&kp NUMBER_2 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
             label = "WRITE_NUMBER_3_2";
         };
+
+        macro_dbl_mouse: macro_dbl_mouse {
+            compatible = "zmk,behavior-macro-two-param";
+            label = "MACRO_DBL_MOUSE";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &mkp MACRO_PLACEHOLDER &macro_param_2to1 &mkp MACRO_PLACEHOLDER>;
+        };
     };
 
     combos {
@@ -443,6 +450,12 @@
         write_number_200 {
             bindings = <&write_number_3_2 NUMBER_0 NUMBER_0>;
             key-positions = <30 29 41>;
+        };
+
+        dbl_mouse_1_combo {
+            bindings = <&macro_dbl_mouse MB1 MB1>;
+            key-positions = <55 56>;
+            layers = <2>;
         };
     };
 
