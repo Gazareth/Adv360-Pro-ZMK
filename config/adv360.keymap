@@ -11,12 +11,6 @@
       #include "version.dtsi"
       #ifndef VERSION_MACRO
 
-        macro_ver: macro_ver {
-            compatible = "zmk,behavior-macro";
-            label = "macro_version";
-            #binding-cells = <0>;
-            bindings = <&kp RET>;
-        };
 
         #endif
 
@@ -79,27 +73,6 @@
             label = "MACRO_TRIPLE_EQUALS";
         };
 
-        macro_less_than_eq: macro_less_than_eq {
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_LESS_THAN_EQ";
-            #binding-cells = <0>;
-            bindings = <&kp LESS_THAN &kp EQUAL>;
-        };
-
-        macro_greater_than_eq: macro_greater_than_eq {
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_GREATER_THAN_EQ";
-            #binding-cells = <0>;
-            bindings = <&kp GT &kp EQUAL>;
-        };
-
-        macro_arrow: macro_arrow {
-            compatible = "zmk,behavior-macro";
-            label = "MACRO_ARROW";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GT>;
-        };
-
         write_number_2: write_number_2 {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
@@ -133,6 +106,13 @@
             label = "MACRO_DBL_MOUSE";
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &mkp MACRO_PLACEHOLDER &macro_param_2to1 &mkp MACRO_PLACEHOLDER>;
+        };
+
+        macro_2_key: macro_2_key {
+            compatible = "zmk,behavior-macro-two-param";
+            label = "MACRO_2_KEY";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
         };
     };
 
@@ -391,21 +371,21 @@
         };
 
         less_than_eq {
-            bindings = <&macro_less_than_eq>;
+            bindings = <&macro_2_key LESS_THAN EQUAL>;
             key-positions = <15 42 17>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         greater_than_eq {
-            bindings = <&macro_greater_than_eq>;
+            bindings = <&macro_2_key GREATER_THAN EQUAL>;
             key-positions = <42 19 17>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         arrow_combo {
-            bindings = <&macro_greater_than_eq>;
+            bindings = <&macro_2_key EQUAL GREATER_THAN>;
             key-positions = <42 19 41 43 17>;
             layers = <0>;
             require-prior-idle-ms = <200>;
