@@ -418,30 +418,15 @@
             layers = <0>;
         };
 
-        binary_number_1 {
-            bindings = <&write_number NUMBER_1>;
-            key-positions = <28 44>;
-        };
-
-        binary_number_10 {
-            bindings = <&write_number_2 NUMBER_1 NUMBER_0>;
-            key-positions = <28 41 43>;
-        };
-
-        write_number_100 {
-            bindings = <&write_number_3_1 NUMBER_0 NUMBER_0>;
-            key-positions = <42 31 30>;
-        };
-
-        write_number_200 {
-            bindings = <&write_number_3_2 NUMBER_0 NUMBER_0>;
-            key-positions = <30 29 41>;
-        };
-
         dbl_mouse_1_combo {
             bindings = <&macro_dbl_mouse MB1 MB1>;
             key-positions = <55 56>;
             layers = <2>;
+        };
+
+        bin_255 {
+            bindings = <&write_number_3_2 N5 N5>;
+            key-positions = <61 62 63 64 71 72 73 74>;
         };
     };
 
