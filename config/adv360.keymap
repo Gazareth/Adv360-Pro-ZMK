@@ -494,7 +494,7 @@
 &trans  &macro_dbl_tap J  &macro_dbl_tap H  &macro_dbl_tap M  &macro_dbl_tap G  &macro_dbl_tap Q  &trans                                                &trans  &macro_dbl_tap V      &macro_dbl_tap C       &macro_dbl_tap U      &macro_dbl_tap O          &macro_dbl_tap X    &trans
 &trans  &macro_dbl_tap S  &macro_dbl_tap N  &macro_dbl_tap T  &macro_dbl_tap Y  &macro_dbl_tap K  &trans  &trans  &trans      &trans  &trans            &trans  &macro_dbl_tap B      &macro_dbl_tap W       &macro_dbl_tap I      &macro_dbl_tap A          &macro_dbl_tap R    &trans
 &trans  &macro_dbl_tap F  &macro_dbl_tap L  &macro_dbl_tap D  &macro_dbl_tap P  &macro_dbl_tap Z                  &trans      &trans                            &macro_dbl_tap SLASH  &macro_dbl_tap PERIOD  &macro_dbl_tap COMMA  &macro_dbl_tap SEMICOLON  &macro_dbl_tap SQT  &trans
-&trans  &trans            &trans            &trans            &trans                              &trans  &trans  &trans      &trans  &macro_dbl_tap E  &trans                        &trans                 &trans                &trans                    &trans              &trans
+&trans  &trans            &trans            &trans            &caps_word                          &trans  &trans  &trans      &trans  &macro_dbl_tap E  &trans                        &trans                 &trans                &trans                    &trans              &trans
             >;
         };
     };
