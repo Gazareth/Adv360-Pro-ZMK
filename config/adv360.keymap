@@ -424,9 +424,24 @@
             layers = <2>;
         };
 
-        bin_255 {
+        combo_bin_255 {
             bindings = <&write_number_3_2 N5 N5>;
             key-positions = <61 62 63 64 71 72 73 74>;
+        };
+
+        combo_bin_3 {
+            bindings = <&kp N3>;
+            key-positions = <74 73>;
+        };
+
+        combo_bin_10 {
+            bindings = <&macro_2_key N1 N0>;
+            key-positions = <73 71>;
+        };
+
+        combo_bin_100 {
+            bindings = <&write_number_3_1 N0 N0>;
+            key-positions = <63 62 72>;
         };
     };
 
