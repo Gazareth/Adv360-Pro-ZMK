@@ -166,46 +166,46 @@
 
         left_paren {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <16 17>;
+            key-positions = <24 22>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         right_paren {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <18 17>;
+            key-positions = <24 26>;
             layers = <0>;
         };
 
         less_than {
             bindings = <&kp LESS_THAN>;
-            key-positions = <17 15>;
+            key-positions = <24 23>;
             layers = <0>;
         };
 
         greater_than {
             bindings = <&kp GT>;
-            key-positions = <17 19>;
+            key-positions = <24 25>;
             layers = <0>;
         };
 
         left_square_paren {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <23 24>;
+            key-positions = <23 42>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         right_square_paren {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <24 25>;
+            key-positions = <25 42>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         left_curly_paren {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <22 24>;
+            key-positions = <22 42>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
@@ -258,14 +258,14 @@
 
         divide {
             bindings = <&kp KP_DIVIDE>;
-            key-positions = <42 23>;
+            key-positions = <42 55>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         multiply {
             bindings = <&kp KP_MULTIPLY>;
-            key-positions = <42 25>;
+            key-positions = <42 57>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
@@ -292,13 +292,13 @@
 
         double_quotes_combo {
             bindings = <&kp AT>;
-            key-positions = <58 57>;
+            key-positions = <58 43>;
             layers = <0>;
         };
 
         grave_combo {
             bindings = <&kp GRAVE>;
-            key-positions = <58 57 56>;
+            key-positions = <58 43 42>;
             layers = <0>;
         };
 
@@ -378,21 +378,21 @@
 
         less_than_eq {
             bindings = <&macro_2_key LESS_THAN EQUAL>;
-            key-positions = <15 42 17>;
+            key-positions = <42 23 43>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         greater_than_eq {
             bindings = <&macro_2_key GREATER_THAN EQUAL>;
-            key-positions = <42 19 17>;
+            key-positions = <42 41 25>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         arrow_combo {
             bindings = <&macro_2_key EQUAL GREATER_THAN>;
-            key-positions = <42 19 41 43 17>;
+            key-positions = <42 43 44>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
@@ -450,11 +450,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE    &kp N1     &kp N2        &kp N3    &kp N4        &kp N5  &tog 1                                                                                       &mo 3         &kp N6     &kp N7          &kp N8           &kp N9         &kp N0     &kp POUND
-&kp LS(TAB)  &kp J      &kp H         &kp M     &kp G         &kp Q   &none                                                                                        &none         &kp V      &kp C           &kp U            &kp O          &kp X      &kp NON_US_BSLH
-&kp TAB      &kp S      &kp N         &kp T     &kp Y         &kp K   &kp END         &kp LCTRL  &kp LEFT_GUI      &kp RIGHT_GUI    &kp RCTRL                      &kp HOME      &kp B      &kp W           &kp I            &kp A          &kp R      &kp MINUS
-&key_repeat  &kp F      &kp L         &kp D     &kp P         &kp Z                              &kp HOME          &kp END                                                       &kp SLASH  &kp PERIOD      &kp COMMA        &kp SEMICOLON  &kp SQT    &key_repeat
-&mkp MB4     &kp LCTRL  &kp LEFT_ALT  &kp LEFT  &kp UP_ARROW          &kp LEFT_SHIFT  &kp SPACE  &lt 4 ENTER       &lt 4 BACKSPACE  &hold_tap_keypad_e_delete 1 0  &lt 2 ESCAPE             &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_ALT  &kp RCTRL  &mkp MB5
+&kp GRAVE    &kp N1                         &kp N2                          &kp N3                          &kp N4                          &kp N5  &tog 1                                                                                       &mo 3         &kp N6     &kp N7      &kp N8        &kp N9         &kp N0        &kp POUND
+&kp LS(TAB)  &kp J                          &kp H                           &kp M                           &kp G                           &kp Q   &none                                                                                        &none         &kp V      &kp C       &kp U         &kp O          &kp X         &kp NON_US_BSLH
+&kp TAB      &kp S                          &kp N                           &kp T                           &kp Y                           &kp K   &kp END         &kp LCTRL  &kp LEFT_GUI      &kp RIGHT_GUI    &kp RCTRL                      &kp HOME      &kp B      &kp W       &kp I         &kp A          &kp R         &kp MINUS
+&key_repeat  &kp F                          &kp L                           &kp D                           &kp P                           &kp Z                              &kp HOME          &kp END                                                       &kp SLASH  &kp PERIOD  &kp COMMA     &kp SEMICOLON  &kp SQT       &key_repeat
+&mkp MB4     &write_number_3_1 NUMBER_2 N8  &macro_2_key NUMBER_6 NUMBER_4  &macro_2_key NUMBER_3 NUMBER_2  &macro_2_key NUMBER_1 NUMBER_6          &kp LEFT_SHIFT  &kp SPACE  &lt 4 ENTER       &lt 4 BACKSPACE  &hold_tap_keypad_e_delete 1 0  &lt 2 ESCAPE             &kp N8      &kp NUMBER_4  &kp NUMBER_2   &kp NUMBER_1  &mkp MB5
             >;
         };
 
