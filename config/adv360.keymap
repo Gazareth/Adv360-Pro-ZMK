@@ -5,6 +5,11 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&lt {
+    retro-tap;
+    hold-while-undecided;
+};
+
 / {
     behaviors {
         #include "macros.dtsi"
