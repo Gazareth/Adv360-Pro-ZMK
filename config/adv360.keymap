@@ -9,6 +9,7 @@
     retro-tap;
     hold-while-undecided;
     flavor = "hold-preferred";
+    quick-tap-ms = <350>;
 };
 
 / {
