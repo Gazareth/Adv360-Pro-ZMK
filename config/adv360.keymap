@@ -456,6 +456,11 @@
             key-positions = <58 43 42>;
             layers = <4>;
         };
+
+        dbl_combo_combo {
+            bindings = <&macro_dbl_tap C>;
+            key-positions = <67 68>;
+        };
     };
 
     keymap {
