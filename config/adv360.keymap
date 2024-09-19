@@ -52,15 +52,23 @@
             flavor = "tap-preferred";
         };
 
-        hold_tap_sticky_shift: hold_tap_sticky_shift {
+        double_tap_sticky_alt: double_tap_sticky_alt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLE_TAP_STICKY_ALT";
+            #binding-cells = <0>;
+            bindings = <&sk LSHIFT>, <&kp DELETE>;
+
+            tapping-term-ms = <350>;
+        };
+
+        hold_tap_shift_alt: hold_tap_shift_alt {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_STICKY_SHIFT";
-            bindings = <&kp>, <&macro_sticky_shift>;
+            label = "HOLD_TAP_SHIFT_ALT";
+            bindings = <&kp>, <&double_tap_sticky_alt>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <350>;
             flavor = "tap-preferred";
-            hold-while-undecided;
         };
     };
 
@@ -479,11 +487,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE    &kp N1                         &kp N2                          &kp N3                          &kp N4                          &kp N5  &tog 1                                                                                                        &mo 3         &kp N6     &kp N7      &kp N8        &kp N9         &kp N0        &kp POUND
-&kp LS(TAB)  &kp J                          &kp H                           &kp M                           &kp G                           &kp Q   &none                                                                                                         &none         &kp V      &kp C       &kp U         &kp O          &kp X         &kp NON_US_BSLH
-&kp TAB      &kp S                          &kp N                           &kp T                           &kp Y                           &kp K   &kp END                            &kp LCTRL  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RCTRL                      &kp HOME      &kp B      &kp W       &kp I         &kp A          &kp R         &kp MINUS
-&key_repeat  &kp F                          &kp L                           &kp D                           &kp P                           &kp Z                                                 &kp HOME          &kp END                                                     &kp SLASH  &kp PERIOD  &kp COMMA     &kp SEMICOLON  &kp SQT       &key_repeat
-&mkp MB4     &write_number_3_1 NUMBER_2 N8  &macro_2_key NUMBER_6 NUMBER_4  &macro_2_key NUMBER_3 NUMBER_2  &macro_2_key NUMBER_1 NUMBER_6          &hold_tap_sticky_shift LEFT_ALT 0  &kp SPACE  &kp ENTER         &kp BACKSPACE  &hold_tap_keypad_e_delete 1 0  &lt 2 ESCAPE             &kp N8      &kp NUMBER_4  &kp NUMBER_2   &kp NUMBER_1  &mkp MB5
+&kp GRAVE    &kp N1                         &kp N2                          &kp N3                          &kp N4                          &kp N5  &tog 1                                                                                                       &mo 3         &kp N6     &kp N7      &kp N8        &kp N9         &kp N0        &kp POUND
+&kp LS(TAB)  &kp J                          &kp H                           &kp M                           &kp G                           &kp Q   &none                                                                                                        &none         &kp V      &kp C       &kp U         &kp O          &kp X         &kp NON_US_BSLH
+&kp TAB      &kp S                          &kp N                           &kp T                           &kp Y                           &kp K   &kp END                           &kp LCTRL  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RCTRL                      &kp HOME      &kp B      &kp W       &kp I         &kp A          &kp R         &kp MINUS
+&key_repeat  &kp F                          &kp L                           &kp D                           &kp P                           &kp Z                                                &kp HOME          &kp END                                                     &kp SLASH  &kp PERIOD  &kp COMMA     &kp SEMICOLON  &kp SQT       &key_repeat
+&mkp MB4     &write_number_3_1 NUMBER_2 N8  &macro_2_key NUMBER_6 NUMBER_4  &macro_2_key NUMBER_3 NUMBER_2  &macro_2_key NUMBER_1 NUMBER_6          &hold_tap_shift_alt LEFT_SHIFT 0  &kp SPACE  &kp ENTER         &kp BACKSPACE  &hold_tap_keypad_e_delete 1 0  &lt 2 ESCAPE             &kp N8      &kp NUMBER_4  &kp NUMBER_2   &kp NUMBER_1  &mkp MB5
             >;
         };
 
