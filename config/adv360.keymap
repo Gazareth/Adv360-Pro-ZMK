@@ -56,7 +56,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOUBLE_TAP_STICKY_ALT";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT>, <&kp DELETE>;
+            bindings = <&sk LSHIFT>, <&kp LSHIFT>;
 
             tapping-term-ms = <350>;
         };
