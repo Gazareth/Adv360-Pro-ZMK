@@ -465,7 +465,7 @@
 
         great_british_pounds {
             bindings = <&kp HASH>;
-            key-positions = <31 19>;
+            key-positions = <19 31>;
             require-prior-idle-ms = <200>;
             layers = <0>;
         };
@@ -479,6 +479,11 @@
         triple_grave_combo {
             bindings = <&macro_triple_tap GRAVE>;
             key-positions = <58 43 42>;
+        };
+
+        hash_key_combo {
+            bindings = <&kp NUHS>;
+            key-positions = <16 18 17>;
         };
     };
 
