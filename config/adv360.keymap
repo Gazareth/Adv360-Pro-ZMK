@@ -201,6 +201,13 @@
 
             label = "MACRO_ALT_TAB";
         };
+
+        write_number_128: write_number_128 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp N2 &kp N3>;
+            label = "WRITE_NUMBER_128";
+        };
     };
 
     combos {
