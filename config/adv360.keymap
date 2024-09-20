@@ -70,6 +70,29 @@
             tapping-term-ms = <350>;
             flavor = "tap-preferred";
         };
+
+        number_128_layer: number_128_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NUMBER_128_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&write_number_128>;
+
+            quick-tap-ms = <0>;
+        };
+
+        repeat_hold: repeat_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "REPEAT_HOLD";
+            bindings = <&kp>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-while-undecided;
+        };
     };
 
     macros {
@@ -168,6 +191,13 @@
                 <&kp LEFT_ALT>;
 
             label = "MACRO_ALT_TAB";
+        };
+
+        write_number_128: write_number_128 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp N2 &kp N8>;
+            label = "WRITE_NUMBER_128";
         };
     };
 
@@ -478,12 +508,17 @@
 
         triple_grave_combo {
             bindings = <&macro_triple_tap GRAVE>;
-            key-positions = <58 43 42>;
+            key-positions = <58 43 42 67>;
         };
 
         hash_key_combo {
             bindings = <&kp NUHS>;
             key-positions = <16 18 17>;
+        };
+
+        question_mark {
+            bindings = <&kp QUESTION>;
+            key-positions = <54 55>;
         };
     };
 
@@ -492,21 +527,21 @@
 
         default_layer {
             bindings = <
-&kp GRAVE    &kp N1                         &kp N2                          &kp N3                          &kp N4                          &kp N5  &tog 1                                                                                                       &mo 3         &kp N6     &kp N7      &kp N8        &kp N9         &kp N0        &kp POUND
-&kp LS(TAB)  &kp J                          &kp H                           &kp M                           &kp G                           &kp Q   &none                                                                                                        &none         &kp V      &kp C       &kp U         &kp O          &kp X         &kp NON_US_BSLH
-&kp TAB      &kp S                          &kp N                           &kp T                           &kp Y                           &kp K   &kp END                           &kp LCTRL  &kp LEFT_GUI      &kp RIGHT_GUI  &kp RCTRL                      &kp HOME      &kp B      &kp W       &kp I         &kp A          &kp R         &kp MINUS
-&key_repeat  &kp F                          &kp L                           &kp D                           &kp P                           &kp Z                                                &kp HOME          &kp END                                                     &kp SLASH  &kp PERIOD  &kp COMMA     &kp SEMICOLON  &kp SQT       &key_repeat
-&mkp MB4     &write_number_3_1 NUMBER_2 N8  &macro_2_key NUMBER_6 NUMBER_4  &macro_2_key NUMBER_3 NUMBER_2  &macro_2_key NUMBER_1 NUMBER_6          &hold_tap_shift_alt LEFT_SHIFT 0  &kp SPACE  &kp ENTER         &kp BACKSPACE  &hold_tap_keypad_e_delete 1 0  &lt 2 ESCAPE             &kp N8      &kp NUMBER_4  &kp NUMBER_2   &kp NUMBER_1  &mkp MB5
+&kp GRAVE              &kp N1                    &kp N2                          &kp N3                          &kp N4                          &kp N5  &tog 1                                                                                     &mo 3         &kp N6     &kp N7      &kp N8        &kp N9         &kp N0        &kp POUND
+&kp LS(TAB)            &kp J                     &kp H                           &kp M                           &kp G                           &kp Q   &none                                                                                      &none         &kp V      &kp C       &kp U         &kp O          &kp X         &kp NON_US_BSLH
+&kp TAB                &kp S                     &kp N                           &kp T                           &kp Y                           &kp K   &kp END                           &kp LCTRL    &kp LEFT_GUI      &kp RIGHT_GUI  &kp RCTRL  &kp HOME      &kp B      &kp W       &kp I         &kp A          &kp R         &kp MINUS
+&repeat_hold LSHIFT 0  &kp F                     &kp L                           &kp D                           &kp P                           &kp Z                                                  &kp LC(HOME)      &kp LC(END)                             &kp SLASH  &kp PERIOD  &kp COMMA     &kp SEMICOLON  &kp SQT       &repeat_hold RSHFT 0
+&mkp MB4               &number_128_layer LALT 0  &macro_2_key NUMBER_6 NUMBER_4  &macro_2_key NUMBER_3 NUMBER_2  &macro_2_key NUMBER_1 NUMBER_6          &hold_tap_shift_alt LEFT_SHIFT 0  &lt 1 SPACE  &kp ENTER         &kp BACKSPACE  &lt 1 E    &lt 2 ESCAPE             &kp N8      &kp NUMBER_4  &kp NUMBER_2   &kp NUMBER_1  &mkp MB5
             >;
         };
 
         keypad {
             bindings = <
-&trans            &trans           &kp F10  &kp F11  &kp F12  &trans  &kp KP_NUMLOCK                                      &trans  &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &trans
-&kp C_NEXT        &kp C_VOLUME_UP  &kp F7   &kp F8   &kp F9   &trans  &none                                               &none   &trans  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &trans
-&kp C_PLAY_PAUSE  &kp K_MUTE       &kp F4   &kp F5   &kp F6   &trans  &none           &trans  &trans      &trans  &trans  &none   &trans  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
-&kp C_PREVIOUS    &kp C_VOL_DN     &kp F1   &kp F2   &kp F3   &trans                          &trans      &trans                  &trans  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
-&trans            &trans           &trans   &trans   &trans           &trans          &trans  &trans      &trans  &trans  &trans          &trans      &trans        &kp KP_DOT     &trans           &trans
+&trans            &trans           &kp F10  &kp F11  &kp F12  &trans  &kp KP_NUMLOCK                                       &trans  &trans  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &trans
+&kp C_NEXT        &kp C_VOLUME_UP  &kp F7   &kp F8   &kp F9   &trans  &none                                                &none   &trans  &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &trans
+&kp C_PLAY_PAUSE  &kp K_MUTE       &kp F4   &kp F5   &kp F6   &trans  &none           &trans  &trans      &trans   &trans  &none   &trans  &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
+&kp C_PREVIOUS    &kp C_VOL_DN     &kp F1   &kp F2   &kp F3   &trans                          &trans      &trans                   &trans  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
+&trans            &trans           &trans   &trans   &trans           &trans          &trans  &trans      &kp DEL  &trans  &trans          &trans      &trans        &kp KP_DOT     &trans           &trans
             >;
         };
 
