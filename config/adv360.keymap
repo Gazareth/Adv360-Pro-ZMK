@@ -551,7 +551,7 @@
             bindings = <
 &kp F1  &kp F2         &kp F3                    &kp F4     &kp F5                     &kp F6       &tog 1                                             &mo 3   &kp F7              &kp F8              &kp F9              &kp F10             &kp F11             &kp F12
 &trans  &kp LC(HOME)   &kp PAGE_UP               &kp UP     &kp PAGE_DOWN              &kp LC(END)  &none                                              &none   &macro_caps_and F7  &macro_caps_and F5  &macro_caps_and F1  &macro_caps_and F6  &macro_caps_and F8  &trans
-&trans  &trans         &kp LEFT                  &kp DOWN   &kp RIGHT                  &trans       &none   &trans  &trans             &trans  &trans  &none   &trans              &macro_caps_and F2  &macro_caps_and F3  &macro_caps_and F4  &trans              &trans
+&trans  &trans         &kp LEFT                  &kp DOWN   &kp RIGHT                  &trans       &none   &trans  &trans             &trans  &trans  &none   &kp F7              &macro_caps_and F2  &macro_caps_and F3  &macro_caps_and F4  &kp F8              &trans
 &trans  &kp LC(LS(T))  &kp LC(LS(LEFT_BRACKET))  &kp LC(W)  &kp LC(LS(RIGHT_BRACKET))  &kp LC(T)                    &trans             &trans                  &mkp MB4            &mkp MB1            &mkp MB3            &mkp MB2            &mkp MB5            &trans
 &trans  &trans         &trans                    &trans     &trans                                  &trans  &trans  &kp LS(ENTER)      &trans  &trans  &trans                      &trans              &trans              &trans              &trans              &trans
             >;
