@@ -102,6 +102,18 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        homerow_layers: homerow_layers {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYERS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&lt>, <&kp>;
+
+            quick-tap-ms = <0>;
+        };
     };
 
     macros {
@@ -536,11 +548,11 @@
 
         default_layer {
             bindings = <
-&kp GRAVE              &kp N1                    &kp N2                          &kp N3                          &kp N4                          &kp N5  &tog 1                                                                                               &mo 3         &kp N6     &kp N7      &kp N8        &kp N9         &kp N0        &kp POUND
-&kp LS(TAB)            &kp J                     &kp H                           &kp M                           &kp G                           &kp Q   &none                                                                                                &none         &kp V      &kp C       &kp U         &kp O          &kp X         &kp NON_US_BSLH
-&kp LS(TAB)            &kp S                     &kp N                           &kp T                           &kp Y                           &kp K   &kp END                           &kp LCTRL    &kp LEFT_GUI      &kp RIGHT_GUI            &kp RCTRL  &kp HOME      &kp B      &kp W       &kp I         &kp A          &kp R         &kp TAB
-&repeat_hold LSHIFT 0  &kp F                     &kp L                           &kp D                           &kp P                           &kp Z                                                  &kp LC(HOME)      &kp LC(END)                                       &kp SLASH  &kp PERIOD  &kp COMMA     &kp SEMICOLON  &kp SQT       &repeat_hold RSHFT 0
-&mkp MB4               &number_128_layer LALT 0  &macro_2_key NUMBER_6 NUMBER_4  &macro_2_key NUMBER_3 NUMBER_2  &macro_2_key NUMBER_1 NUMBER_6          &hold_tap_shift_alt LEFT_SHIFT 0  &lt 1 SPACE  &kp ENTER         &backspace_delete_morph  &lt 1 E    &lt 2 ESCAPE             &kp N8      &kp NUMBER_4  &kp NUMBER_2   &kp NUMBER_1  &mkp MB5
+&kp GRAVE              &kp N1                    &kp N2                          &kp N3                          &kp N4                          &kp N5  &tog 1                                                                                                         &mo 3         &kp N6     &kp N7      &kp N8        &kp N9         &kp N0        &kp POUND
+&kp LS(TAB)            &kp J                     &kp H                           &kp M                           &kp G                           &kp Q   &none                                                                                                          &none         &kp V      &kp C       &kp U         &kp O          &kp X         &kp NON_US_BSLH
+&kp LS(TAB)            &kp S                     &kp N                           &kp T                           &kp Y                           &kp K   &kp END                           &kp LCTRL    &kp LEFT_GUI      &kp RIGHT_GUI            &kp RCTRL            &kp HOME      &kp B      &kp W       &kp I         &kp A          &kp R         &kp TAB
+&repeat_hold LSHIFT 0  &kp F                     &kp L                           &kp D                           &kp P                           &kp Z                                                  &kp LC(HOME)      &kp LC(END)                                                 &kp SLASH  &kp PERIOD  &kp COMMA     &kp SEMICOLON  &kp SQT       &repeat_hold RSHFT 0
+&mkp MB4               &number_128_layer LALT 0  &macro_2_key NUMBER_6 NUMBER_4  &macro_2_key NUMBER_3 NUMBER_2  &macro_2_key NUMBER_1 NUMBER_6          &hold_tap_shift_alt LEFT_SHIFT 0  &lt 1 SPACE  &kp ENTER         &backspace_delete_morph  &homerow_layers 1 E  &lt 2 ESCAPE             &kp N8      &kp NUMBER_4  &kp NUMBER_2   &kp NUMBER_1  &mkp MB5
             >;
         };
 
