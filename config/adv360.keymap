@@ -407,7 +407,7 @@
 
         browser_recent_tab {
             bindings = <&kp LA(Q)>;
-            key-positions = <30 50>;
+            key-positions = <29 51>;
             layers = <2>;
         };
 
@@ -540,6 +540,11 @@
         question_mark {
             bindings = <&kp QUESTION>;
             key-positions = <54 55>;
+        };
+
+        select_all {
+            bindings = <&kp LC(A)>;
+            key-positions = <31 48 50>;
         };
     };
 
