@@ -5,7 +5,7 @@
   };
 
 // Binary number combos
-CREATE_BINARY_COMBO(1, &kp N1, 74)
+// CREATE_BINARY_COMBO(1, &kp N1, 74)
 CREATE_BINARY_COMBO(2, &kp N2, 73)
 CREATE_BINARY_COMBO(3, &kp N3, 73 74)
 CREATE_BINARY_COMBO(4, &kp N4, 72)
