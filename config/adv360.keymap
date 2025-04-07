@@ -430,56 +430,56 @@
         };
 
         DESKTOP_1 {
-            bindings = <&macro_caps_and Q>;
+            bindings = <&macro_caps_and NUMBER_1>;
             key-positions = <29 16>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_2 {
-            bindings = <&macro_caps_and W>;
+            bindings = <&macro_caps_and NUMBER_2>;
             key-positions = <29 17>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_3 {
-            bindings = <&macro_caps_and E>;
+            bindings = <&macro_caps_and NUMBER_3>;
             key-positions = <29 18>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_4 {
-            bindings = <&macro_caps_and R>;
+            bindings = <&macro_caps_and NUMBER_4>;
             key-positions = <29 19>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_5 {
-            bindings = <&macro_caps_and A>;
+            bindings = <&macro_caps_and Q>;
             key-positions = <29 30>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_6 {
-            bindings = <&macro_caps_and S>;
+            bindings = <&macro_caps_and W>;
             key-positions = <29 31>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_7 {
-            bindings = <&macro_caps_and D>;
+            bindings = <&macro_caps_and E>;
             key-positions = <29 31>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_8 {
-            bindings = <&macro_caps_and F>;
+            bindings = <&macro_caps_and R>;
             key-positions = <29 32>;
             layers = <0>;
             require-prior-idle-ms = <200>;
