@@ -452,35 +452,35 @@
 
         DESKTOP_4 {
             bindings = <&macro_caps_and NUMBER_4>;
-            key-positions = <29 19>;
+            key-positions = <19 29>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_5 {
             bindings = <&macro_caps_and Q>;
-            key-positions = <29 30>;
+            key-positions = <30 47>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_6 {
             bindings = <&macro_caps_and W>;
-            key-positions = <29 31>;
+            key-positions = <31 47>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_7 {
             bindings = <&macro_caps_and E>;
-            key-positions = <29 31>;
+            key-positions = <32 47>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
         DESKTOP_8 {
             bindings = <&macro_caps_and R>;
-            key-positions = <29 32>;
+            key-positions = <33 47>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
