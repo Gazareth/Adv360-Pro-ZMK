@@ -120,6 +120,15 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        lt_hold_preferred: lt_hold_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_HOLD_PREFERRED";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -559,11 +568,11 @@
 
         default_layer {
             bindings = <
-&mkp MB4               &kp N1             &kp N2                          &kp N3                          &kp N4                          &kp N5  &tog 1                                                                                               &mo 3                 &kp N6     &kp N7      &kp N8        &kp N9         &kp N0             &mkp MB5
-&kp LS(TAB)            &kp J              &kp H                           &kp M                           &kp G                           &kp Q   &macro_caps_and SINGLE_QUOTE                                                                         &macro_caps_and NUHS  &kp V      &kp C       &kp U         &kp O          &kp X              &kp NON_US_BSLH
-&kp LS(TAB)            &kp S              &kp N                           &kp T                           &kp Y                           &kp K   &kp END                           &kp LCTRL    &kp LEFT_GUI      &kp RIGHT_GUI            &kp RCTRL  &kp HOME              &kp B      &kp W       &kp I         &kp A          &kp R              &kp TAB
-&repeat_hold LSHIFT 0  &kp F              &kp L                           &kp D                           &kp P                           &kp Z                                                  &kp LC(HOME)      &kp LC(END)                                               &kp SLASH  &kp PERIOD  &kp COMMA     &kp SEMICOLON  &kp SQT            &repeat_hold RSHFT 0
-&kp LS(LC(SPACE))      &ht_128_kp LALT 0  &macro_2_key NUMBER_6 NUMBER_4  &macro_2_key NUMBER_3 NUMBER_2  &macro_2_key NUMBER_1 NUMBER_6          &hold_tap_shift_alt LEFT_SHIFT 0  &lt 1 SPACE  &kp ENTER         &backspace_delete_morph  &kp E      &lt 2 ESCAPE                     &kp N8      &kp NUMBER_4  &kp NUMBER_2   &mt RALT NUMBER_1  &kp LC(LA(V))
+&mkp MB4               &kp N1             &kp N2                          &kp N3                          &kp N4                          &kp N5  &tog 1                                                                                               &mo 3                        &kp N6     &kp N7      &kp N8        &kp N9         &kp N0             &mkp MB5
+&kp LS(TAB)            &kp J              &kp H                           &kp M                           &kp G                           &kp Q   &macro_caps_and SINGLE_QUOTE                                                                         &macro_caps_and NUHS         &kp V      &kp C       &kp U         &kp O          &kp X              &kp NON_US_BSLH
+&kp LS(TAB)            &kp S              &kp N                           &kp T                           &kp Y                           &kp K   &kp END                           &kp LCTRL    &kp LEFT_GUI      &kp RIGHT_GUI            &kp RCTRL  &kp HOME                     &kp B      &kp W       &kp I         &kp A          &kp R              &kp TAB
+&repeat_hold LSHIFT 0  &kp F              &kp L                           &kp D                           &kp P                           &kp Z                                                  &kp LC(HOME)      &kp LC(END)                                                      &kp SLASH  &kp PERIOD  &kp COMMA     &kp SEMICOLON  &kp SQT            &repeat_hold RSHFT 0
+&kp LS(LC(SPACE))      &ht_128_kp LALT 0  &macro_2_key NUMBER_6 NUMBER_4  &macro_2_key NUMBER_3 NUMBER_2  &macro_2_key NUMBER_1 NUMBER_6          &hold_tap_shift_alt LEFT_SHIFT 0  &lt 1 SPACE  &kp ENTER         &backspace_delete_morph  &kp E      &lt_hold_preferred 2 ESCAPE             &kp N8      &kp NUMBER_4  &kp NUMBER_2   &mt RALT NUMBER_1  &kp LC(LA(V))
             >;
         };
 
