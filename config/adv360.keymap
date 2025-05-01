@@ -575,6 +575,19 @@
             bindings = <&kp LC(A)>;
             key-positions = <31 48 50>;
         };
+
+        copy_all_combo {
+            bindings = <&macro_copy_all>;
+            key-positions = <31 50 30>;
+            require-prior-idle-ms = <200>;
+            layers = <0>;
+        };
+
+        cut_all_combo {
+            bindings = <&macro_cut_all>;
+            key-positions = <31 48 32>;
+            layers = <0>;
+        };
     };
 
     keymap {
