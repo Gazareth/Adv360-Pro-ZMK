@@ -230,6 +230,20 @@
             bindings = <&kp N1 &kp N2 &kp N3>;
             label = "WRITE_NUMBER_128";
         };
+
+        macro_copy_all: macro_copy_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LC(C)>;
+            label = "MACRO_COPY_ALL";
+        };
+
+        macro_cut_all: macro_cut_all {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LC(X)>;
+            label = "MACRO_CUT_ALL";
+        };
     };
 
     combos {
@@ -417,7 +431,7 @@
 
         browser_recent_tab {
             bindings = <&kp LA(Q)>;
-            key-positions = <29 51>;
+            key-positions = <29 50>;
             layers = <2>;
         };
 
