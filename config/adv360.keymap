@@ -235,20 +235,6 @@
             bindings = <&kp N1 &kp N2 &kp N8>;
             label = "WRITE_NUMBER_128";
         };
-
-        macro_copy_all: macro_copy_all {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp LC(C)>;
-            label = "MACRO_COPY_ALL";
-        };
-
-        macro_cut_all: macro_cut_all {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp LC(X)>;
-            label = "MACRO_CUT_ALL";
-        };
     };
 
     combos {
@@ -575,19 +561,6 @@
             bindings = <&kp LC(A)>;
             key-positions = <31 48 50>;
         };
-
-        copy_all_combo {
-            bindings = <&macro_copy_all>;
-            key-positions = <31 50 30>;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
-        };
-
-        cut_all_combo {
-            bindings = <&macro_cut_all>;
-            key-positions = <31 48 32>;
-            layers = <0>;
-        };
     };
 
     keymap {
@@ -615,11 +588,11 @@
 
         mouse {
             bindings = <
-&kp F1  &kp F2         &kp F3                    &kp F4     &kp F5                     &kp F6       &tog 1                                             &mo 3   &kp F7          &kp F8          &kp F9          &kp F10          &kp F11          &kp F12
-&trans  &kp LC(HOME)   &kp PAGE_UP               &kp UP     &kp PAGE_DOWN              &kp LC(END)  &none                                              &none   &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &trans
-&trans  &trans         &kp LEFT                  &kp DOWN   &kp RIGHT                  &trans       &none   &trans  &trans             &trans  &trans  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
-&trans  &kp LC(LS(T))  &kp LC(LS(LEFT_BRACKET))  &kp LC(W)  &kp LC(LS(RIGHT_BRACKET))  &kp LC(T)                    &trans             &trans                  &mkp MB4        &mkp MB1        &mkp MB3        &mkp MB2         &mkp MB5         &trans
-&trans  &trans         &trans                    &trans     &trans                                  &trans  &trans  &kp LS(ENTER)      &trans  &trans  &trans                  &trans          &trans          &trans           &trans           &trans
+&kp F1  &kp F2         &kp F3                    &kp F4     &kp F5                     &kp F6       &tog 1                                             &mo 3   &kp F7          &kp F8          &kp F9             &kp F10          &kp F11          &kp F12
+&trans  &kp LC(HOME)   &kp PAGE_UP               &kp UP     &kp PAGE_DOWN              &kp LC(END)  &none                                              &none   &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP       &msc SCRL_DOWN   &msc SCRL_RIGHT  &trans
+&trans  &trans         &kp LEFT                  &kp DOWN   &kp RIGHT                  &trans       &none   &trans  &trans             &trans  &trans  &none   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
+&trans  &kp LC(LS(T))  &kp LC(LS(LEFT_BRACKET))  &kp LC(W)  &kp LC(LS(RIGHT_BRACKET))  &kp LC(T)                    &trans             &trans                  &mkp MB4        &mkp MB1        &mkp MB3           &mkp MB2         &mkp MB5         &trans
+&trans  &trans         &macro_caps_and X         &trans     &trans                                  &trans  &trans  &kp LS(ENTER)      &trans  &trans  &trans                  &trans          &macro_caps_and D  &trans           &trans           &trans
             >;
         };
 
