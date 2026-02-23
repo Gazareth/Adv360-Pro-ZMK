@@ -267,22 +267,37 @@
         #include "binary_combos.dtsi"
         #include "repeat_key_combos.dtsi"
 
-        triple_equals {
-            bindings = <&macro_triple_tap EQUAL>;
-            key-positions = <41 42 43 44>;
+        combo_undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <30 49>;
             layers = <0>;
-            timeout-ms = <200>;
+            require-prior-idle-ms = <200>;
         };
 
-        equals {
-            bindings = <&kp EQUAL>;
-            key-positions = <41 42 43>;
+        combo_redo {
+            bindings = <&kp LC(LS(Z))>;
+            key-positions = <30 50>;
             layers = <0>;
         };
 
-        pct {
-            bindings = <&kp PRCNT>;
-            key-positions = <31 32 30>;
+        combo_select_all {
+            bindings = <&kp LC(A)>;
+            key-positions = <50 49 48>;
+            require-prior-idle-ms = <200>;
+            layers = <0>;
+        };
+
+        combo_copy_all {
+            bindings = <&macro_select_all_and LC(C)>;
+            key-positions = <50 31>;
+            require-prior-idle-ms = <200>;
+            layers = <0>;
+        };
+
+        combo_cut_all {
+            bindings = <&macro_select_all_and LC(X)>;
+            key-positions = <31 48>;
+            require-prior-idle-ms = <200>;
             layers = <0>;
         };
 
@@ -293,16 +308,35 @@
             require-prior-idle-ms = <200>;
         };
 
-        copy_combo {
+        combo_copy {
             bindings = <&kp LC(C)>;
             key-positions = <50 49>;
             layers = <0>;
             require-prior-idle-ms = <200>;
         };
 
-        cut_combo {
+        combo_cut {
             bindings = <&kp LC(X)>;
             key-positions = <48 49>;
+            layers = <0>;
+        };
+
+        combo_triple_equals {
+            bindings = <&macro_triple_tap EQUAL>;
+            key-positions = <41 42 43 44>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+
+        combo_equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <41 42 43>;
+            layers = <0>;
+        };
+
+        combo_pct {
+            bindings = <&kp PRCNT>;
+            key-positions = <31 32 30>;
             layers = <0>;
         };
 
@@ -410,19 +444,6 @@
             key-positions = <42 57>;
             layers = <0>;
             require-prior-idle-ms = <200>;
-        };
-
-        undo_combo {
-            bindings = <&kp LC(Z)>;
-            key-positions = <30 49>;
-            layers = <0>;
-            require-prior-idle-ms = <200>;
-        };
-
-        redo_combo {
-            bindings = <&kp LC(LS(Z))>;
-            key-positions = <30 50>;
-            layers = <0>;
         };
 
         underscore_combo {
@@ -586,30 +607,9 @@
             key-positions = <31 48 50>;
         };
 
-        Mission_control {
+        combo_mission_control {
             bindings = <&macro_caps_and SPACE>;
             key-positions = <29 66>;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
-        };
-
-        combo_select_all {
-            bindings = <&kp LC(A)>;
-            key-positions = <50 49 48>;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
-        };
-
-        combo_copy_all {
-            bindings = <&macro_select_all_and LC(C)>;
-            key-positions = <50 31>;
-            require-prior-idle-ms = <200>;
-            layers = <0>;
-        };
-
-        combo_cut_all {
-            bindings = <&macro_select_all_and LC(X)>;
-            key-positions = <31 48>;
             require-prior-idle-ms = <200>;
             layers = <0>;
         };
