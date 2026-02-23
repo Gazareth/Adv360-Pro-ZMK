@@ -433,7 +433,7 @@
 
         browser_recent_tab {
             bindings = <&kp LA(Q)>;
-            key-positions = <29 50>;
+            key-positions = <29 51>;
             layers = <2>;
         };
 
