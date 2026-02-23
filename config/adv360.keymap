@@ -572,6 +572,13 @@
             bindings = <&kp LC(A)>;
             key-positions = <31 48 50>;
         };
+
+        Mission_control {
+            bindings = <&macro_caps_and SPACE>;
+            key-positions = <29 66>;
+            require-prior-idle-ms = <200>;
+            layers = <0>;
+        };
     };
 
     keymap {
