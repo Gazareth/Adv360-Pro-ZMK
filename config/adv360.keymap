@@ -613,6 +613,16 @@
             require-prior-idle-ms = <200>;
             layers = <0>;
         };
+
+        combo_toggle_finder {
+            bindings = <&macro_caps_and D>;
+            key-positions = <29 49>;
+        };
+
+        combo_toggle_settings {
+            bindings = <&macro_caps_and D>;
+            key-positions = <29 48>;
+        };
     };
 
     keymap {
